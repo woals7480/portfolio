@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Bubbles&family=Sunflower:wght@300;500;700&display=swap");
+@import "reset.css";
+
+a {
+  font-family: "Sunflower", sans-serif;
+}
+
+.nav-left {
+  width: 6rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e4e9f4;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-left__logo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #1f1c30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 2rem;
+}
+
+.nav-left__logo h2 {
+  color: #fff;
+  font-size: 22px;
+  font-family: "Rubik Bubbles", cursive;
+}
+
+.nav-left__contents {
+  position: absolute;
+  top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: -0.1rem;
+}
+
+.nav-left__port {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.nav-left__content a div {
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+}
+
+.content__home {
+  background-color: #0c9aff;
+}
+
+.content__resume {
+  background-color: #f7f702;
+}
+
+.content__about {
+  background-color: #f78b01;
+}
+
+.content__project {
+  background-color: #f7a0e2;
+}
+
+.content__github {
+  background-color: #41f744;
+}
+
+.nav__content {
+  position: relative;
+}
+
+.nav__content-active {
+  transform: rotate(5deg);
+  box-shadow: -0.5rem 0px 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.nav__content:not(.nav__content-active)::before {
+  display: block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-width: 10px 0 0 10px;
+  border-style: solid;
+  border-color: #e4e9f4 transparent transparent rgba(0, 0, 0, 0.3);
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav-left__port {
+  font-family: "Permanent Marker", cursive;
+}
